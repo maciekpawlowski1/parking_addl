@@ -1,0 +1,1199 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="ab4beb75-4141-4532-a6d9-0bdb18685e16" manual="true">
+    <element uuid="1503277d-058b-46f7-87a8-3023ae9681d5" manual="true">
+      <element uuid="a638390b-6e18-4e62-afea-1600997438e6" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>ethernetAccess</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>ParkingProcessor</seg>
+      </bo>
+      <position x="870.0" y="80.0"/>
+      <size width="365.02992248535156" height="60.0"/>
+    </element>
+    <element uuid="fd8a9971-6e61-455f-8922-eb69d7aa16f7" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>ParkingSystem</seg>
+      </bo>
+      <position x="520.0" y="70.0"/>
+      <size width="142.0" height="35.0"/>
+    </element>
+    <element uuid="df84435d-3599-4b72-bdd2-fee4d250e3fb" manual="true">
+      <element uuid="da36b819-f4ac-485a-a9ed-5715887a1255" manual="true">
+        <element uuid="59738a63-1ac7-47f6-ba75-b3372e51658b" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>unidirectional</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>createTicketConnection</seg>
+        </bo>
+      </element>
+      <element uuid="b37ee4b4-a7ff-48fe-8f8a-a36f87997ee5" manual="true">
+        <element uuid="4ac47332-fc58-4265-b820-1af2c73931b6" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>unidirectional</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>entry_ethernet_connection</seg>
+        </bo>
+      </element>
+      <element uuid="1a5f044d-67dc-486f-8677-de81abbb3feb" manual="true">
+        <element uuid="47e1d3ac-e048-4144-bb63-3fee79bbf8aa" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>unidirectional</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>exit_ethernet_connection</seg>
+        </bo>
+        <bendpoints>
+          <point x="156.0" y="2097.0"/>
+        </bendpoints>
+      </element>
+      <element uuid="9c2839c2-970d-48f3-8758-27b185f82cbe" manual="true">
+        <element uuid="f52b99bb-591b-49d0-9775-dfc1bc8d11ce" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>unidirectional</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>insertedMoneyConnection</seg>
+        </bo>
+      </element>
+      <element uuid="8118f4b6-a3c4-4735-a1f0-2571c399a396" manual="true">
+        <element uuid="c1e4a2d6-b9d7-4808-aca1-e47060268366" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>unidirectional</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>openBarrieConnection</seg>
+        </bo>
+      </element>
+      <element uuid="bf9ea045-c185-4b92-8b67-d1abe5b29280" manual="true">
+        <element uuid="e1a797aa-f631-4f52-a4dd-5cf1b282eba2" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>unidirectional</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>pay_connection</seg>
+        </bo>
+      </element>
+      <element uuid="d4dfa209-b335-431e-93f3-2a3aae073155" manual="true">
+        <element uuid="04df5c7a-32e0-4232-b03a-46c17d34a873" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>unidirectional</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>processorEthernetAccess</seg>
+        </bo>
+      </element>
+      <element uuid="61188d91-a617-4e2c-be51-e28c3e7eac84" manual="true">
+        <element uuid="c03d963c-b58b-47b8-9043-5b58b8623987" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>unidirectional</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>quatations_connection1</seg>
+        </bo>
+      </element>
+      <element uuid="f029e279-9de1-41d0-86df-ee0637137973" manual="true">
+        <element uuid="45896cdc-76fa-4c25-bd50-4631d6495190" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>unidirectional</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>quatations_connection2</seg>
+        </bo>
+      </element>
+      <element uuid="2fcf7ee9-e1b6-4ffe-9ea4-e37539fa7c84" manual="true">
+        <element uuid="e7e7feb4-6a19-4f82-8c99-6fe734702543" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>unidirectional</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>ticketsReadsConnection</seg>
+        </bo>
+      </element>
+      <element uuid="e0c82b58-d84e-49b6-abaf-75ac61828465" manual="true">
+        <element uuid="6ef27f45-59a8-4db6-a2c7-7e7dc714f898" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>unidirectional</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>validateTicketOutputConnection</seg>
+        </bo>
+      </element>
+      <element uuid="069d9db0-30c5-4779-a248-82efdbeb7deb" manual="true">
+        <bo>
+          <seg>realization</seg>
+        </bo>
+        <bendpoints>
+          <point x="252.0" y="111.0"/>
+          <point x="264.0" y="111.0"/>
+        </bendpoints>
+      </element>
+      <element uuid="0995dd99-bcbf-4713-9868-a69b730e2e5e" manual="true">
+        <element uuid="d942b797-7430-4d17-82b5-d111e6a4d5a8" manual="true">
+          <element uuid="29d43a6c-0709-4c06-a78a-4e0ec6143b81" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>unidirectional</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>connection</seg>
+            <seg>availabilityMonitorConnection</seg>
+          </bo>
+        </element>
+        <element uuid="c7a96e43-735c-4b5f-bcc2-bdeb642192c5" manual="true">
+          <element uuid="f0f5f2f5-18a9-4f66-a67e-38fc98bd9b80" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>unidirectional</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>connection</seg>
+            <seg>availabilityMonitorUsbAccess</seg>
+          </bo>
+          <bendpoints>
+            <point x="303.0" y="3008.0"/>
+            <point x="309.0" y="3008.0"/>
+            <point x="309.0" y="3019.0"/>
+            <point x="1263.0" y="3099.0"/>
+            <point x="1293.0" y="3132.0"/>
+          </bendpoints>
+        </element>
+        <element uuid="5e86f9f2-aff6-4cd1-89b7-5ec943c3eeed" manual="true">
+          <element uuid="40347c70-8b34-44fa-a484-484b396c9890" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>unidirectional</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>connection</seg>
+            <seg>availabilitySensorConnection</seg>
+          </bo>
+        </element>
+        <element uuid="c97163aa-36b9-4d4f-98f8-73fe24ebc63e" manual="true">
+          <element uuid="764402e8-be57-41f1-a9f3-0b691be63dde" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>unidirectional</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>connection</seg>
+            <seg>availabilitySensorUsbAccess</seg>
+          </bo>
+          <bendpoints>
+            <point x="311.0" y="3244.0"/>
+          </bendpoints>
+        </element>
+        <element uuid="75933823-1f21-4fd9-bde0-b14db69ebd36" manual="true">
+          <element uuid="4b85b786-f9ea-4f9f-a5d3-dd531b97f055" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>unidirectional</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>connection</seg>
+            <seg>processorUsbAccess</seg>
+          </bo>
+        </element>
+        <element uuid="64959b15-caf5-4f0b-bb24-396626ac1144" manual="true">
+          <element uuid="9e447532-ed33-456d-839f-3162d1ec71e5" manual="true" dockArea="left">
+            <bo>
+              <seg>feature</seg>
+              <seg>availabilityUsbAccess</seg>
+            </bo>
+            <position y="60.0"/>
+          </element>
+          <element uuid="08217c47-5cc9-40e5-8781-6367c3057459" manual="true" dockArea="left">
+            <bo>
+              <seg>feature</seg>
+              <seg>numberOfTakenPlacesIn</seg>
+            </bo>
+            <position y="10.0"/>
+          </element>
+          <element uuid="d1ab32f4-4a6b-4e98-b7da-9d5aaf5f28ff" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>sc_type</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>availabilityMonitor</seg>
+          </bo>
+          <position x="1350.0" y="420.0"/>
+          <size width="549.0" height="110.0"/>
+        </element>
+        <element uuid="3f62874e-31e6-4725-be1b-0c4bf3e366df" manual="true">
+          <element uuid="171455b9-c4d4-475c-a954-fbef67303544" manual="true" dockArea="left">
+            <bo>
+              <seg>feature</seg>
+              <seg>isPlaceTakenIn</seg>
+            </bo>
+            <position y="10.0"/>
+          </element>
+          <element uuid="daa1f686-e9cb-437c-adcd-ea9613fbe68b" manual="true" dockArea="right">
+            <bo>
+              <seg>feature</seg>
+              <seg>numberOfTakenPlacesOut</seg>
+            </bo>
+            <position x="403.1484375" y="10.0"/>
+          </element>
+          <element uuid="5ce0d4d2-a96b-411e-9ba4-9afe02364d64" manual="true">
+            <bo>
+              <seg>pvg</seg>
+              <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+              <seg>dca804c2-3095-4755-8f56-66a6e95539c2</seg>
+            </bo>
+          </element>
+          <element uuid="7f1e5a64-1f49-4dd1-b408-9fa9f895ca4b" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>sc_type</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>availabilityProcess</seg>
+          </bo>
+          <position x="757.0" y="119.0"/>
+          <size width="573.0" height="60.0"/>
+        </element>
+        <element uuid="dca804c2-3095-4755-8f56-66a6e95539c2" manual="true">
+          <element uuid="222853ed-0b1f-4578-a19d-16cab7c11906" manual="true" dockArea="left">
+            <bo>
+              <seg>feature</seg>
+              <seg>usbAccess</seg>
+            </bo>
+            <position y="10.0"/>
+          </element>
+          <element uuid="482a4cc3-03e0-4715-ad63-d07a81b22423" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>sc_type</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>availabilityProcessor</seg>
+          </bo>
+          <position x="40.0" y="40.0"/>
+          <size width="398.3502960205078" height="60.0"/>
+        </element>
+        <element uuid="b8257d47-f9c6-43a7-bfa3-800a75485b31" manual="true">
+          <element uuid="1bb6d3e0-2e1a-4ba7-9929-26e34fd4d56b" manual="true" dockArea="left">
+            <bo>
+              <seg>feature</seg>
+              <seg>availabilityUsbAccess</seg>
+            </bo>
+            <position y="10.0"/>
+          </element>
+          <element uuid="7bae82ca-160e-4aa5-a83c-4dc274f3a5a1" manual="true" dockArea="right">
+            <bo>
+              <seg>feature</seg>
+              <seg>isPlaceTakenOut</seg>
+            </bo>
+            <position x="394.4700469970703" y="10.0"/>
+          </element>
+          <element uuid="7c6ee401-9183-4412-b9ca-b4d9350f9e55" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>sc_type</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>availabilitySensor</seg>
+          </bo>
+          <position x="450.0" y="390.0"/>
+          <size width="508.0" height="60.0"/>
+        </element>
+        <element uuid="3824ae79-6dfe-46c9-87fc-da8378a6b63c" manual="true">
+          <element uuid="5002942e-b18f-469c-82a3-78ed36df7687" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>sc_type</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>availabilityUsb</seg>
+          </bo>
+          <position x="10.0" y="240.0"/>
+          <size width="209.0" height="52.0"/>
+        </element>
+        <element uuid="d33f6d14-f3bf-4c52-af8c-cdb26aed2814" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>sc_type</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>availabilitySubsystem</seg>
+        </bo>
+        <position y="2620.0"/>
+        <size width="1899.0" height="580.0"/>
+      </element>
+      <element uuid="7a17e373-7b66-465b-829d-2c9b740966fb" manual="true">
+        <element uuid="ab220c10-b649-4320-a6ee-b87428856fd6" manual="true" dockArea="bottom">
+          <bo>
+            <seg>feature</seg>
+            <seg>insertedMoney</seg>
+          </bo>
+          <position x="143.32811737060547" y="86.0"/>
+        </element>
+        <element uuid="67a4c58d-e76c-4b6b-bdfa-7bb2ad4f430b" manual="true" dockArea="bottom">
+          <bo>
+            <seg>feature</seg>
+            <seg>ticketsReads</seg>
+          </bo>
+          <position x="30.0" y="86.0"/>
+        </element>
+        <element uuid="d7e7f7ba-7526-4dc4-9757-19930106ef5c" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>sc_type</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>cashRegisterDevice</seg>
+        </bo>
+        <position x="190.0" y="790.0"/>
+        <size width="420.0" height="110.0"/>
+      </element>
+      <element uuid="f411ec5c-0863-494d-bccc-98d4e6b799c0" manual="true">
+        <element uuid="4af61f63-319e-40a1-b075-e6f77e0d7545" manual="true" dockArea="top">
+          <bo>
+            <seg>feature</seg>
+            <seg>insertedMoney</seg>
+          </bo>
+          <position x="40.0"/>
+        </element>
+        <element uuid="230893f9-c003-49b2-afa1-589b78ca3e95" manual="true" dockArea="bottom">
+          <bo>
+            <seg>feature</seg>
+            <seg>payOut</seg>
+          </bo>
+          <position x="330.0" y="236.0"/>
+        </element>
+        <element uuid="fd610c0a-ec22-425a-990c-498ed9ded0de" manual="true" dockArea="bottom">
+          <bo>
+            <seg>feature</seg>
+            <seg>quatationsIn</seg>
+          </bo>
+          <position x="220.0" y="236.0"/>
+        </element>
+        <element uuid="29edeaa3-e836-4370-9b21-2c609d6e212a" manual="true" dockArea="bottom">
+          <bo>
+            <seg>feature</seg>
+            <seg>quatationsOut</seg>
+          </bo>
+          <position x="30.0" y="236.0"/>
+        </element>
+        <element uuid="48788ed3-8e86-4ea0-9637-6d9ca142d05e" manual="true" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>ticketsReads</seg>
+          </bo>
+          <position y="30.0"/>
+        </element>
+        <element uuid="ffea2ea6-1738-4ca6-87d6-322ffb9b1612" manual="true">
+          <bo>
+            <seg>pvg</seg>
+            <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+            <seg>7bc91054-70aa-4eba-8053-a950159a89b7</seg>
+          </bo>
+          <bendpoints>
+            <point x="753.0" y="994.0"/>
+          </bendpoints>
+        </element>
+        <element uuid="dd946ebf-9faa-4b07-9d09-4170a772148b" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>sc_type</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>cashRegisterProcess</seg>
+        </bo>
+        <position x="340.0" y="1060.0"/>
+        <size width="468.0" height="260.0"/>
+      </element>
+      <element uuid="6b7b3674-9637-4cdd-9ba1-179c60cc2fd8" manual="true">
+        <element uuid="1fd8dadd-48b5-4a9e-afd5-eb0533409b5d" manual="true">
+          <element uuid="fcc3846b-c95b-41e2-a9c0-d109008159e9" manual="true">
+            <bo>
+              <seg>pvg</seg>
+              <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+              <seg>f5607308-43de-4311-bfa7-c11858ea98d3</seg>
+            </bo>
+          </element>
+          <element uuid="a4e7e8b3-8aed-4d11-985e-13d39a8cb067" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>unidirectional</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>connection</seg>
+            <seg>barrierOpenEventConnection</seg>
+          </bo>
+        </element>
+        <element uuid="889450bf-8185-4843-afec-e3da4e893ec9" manual="true">
+          <element uuid="c6d8e079-5751-41ea-b781-497dd7c5232f" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>unidirectional</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>connection</seg>
+            <seg>barrierUsbAccess</seg>
+          </bo>
+        </element>
+        <element uuid="525a310b-661f-4fa4-ab74-2c2e6c5f1ac6" manual="true">
+          <element uuid="28fa57a5-4503-4bdb-a445-091f95acacf3" manual="true">
+            <bo>
+              <seg>pvg</seg>
+              <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+              <seg>eb2b5cdb-9ac8-4aa1-b5ca-40c5ce89e9e5</seg>
+            </bo>
+          </element>
+          <element uuid="2c784c95-6f8d-49ea-a4e0-03be381c0cb1" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>unidirectional</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>connection</seg>
+            <seg>createTicketOutputConnection</seg>
+          </bo>
+        </element>
+        <element uuid="da1236c9-7c4d-4dfb-b6da-5e97c5e6d58a" manual="true">
+          <element uuid="a777254f-946f-4ea8-95d7-5f95964c7080" manual="true">
+            <bo>
+              <seg>pvg</seg>
+              <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+              <seg>f5607308-43de-4311-bfa7-c11858ea98d3</seg>
+            </bo>
+          </element>
+          <element uuid="92da079e-a590-489b-a25d-6068fa5d857f" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>unidirectional</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>connection</seg>
+            <seg>dispenserTicketRequestConnection</seg>
+          </bo>
+        </element>
+        <element uuid="0a6118fb-4c0d-4db8-9e1a-b1ab8d261205" manual="true">
+          <element uuid="29bd5697-ad4c-4f9e-bc63-9aa8b56648c7" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>unidirectional</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>connection</seg>
+            <seg>dispenserUsbAccess</seg>
+          </bo>
+        </element>
+        <element uuid="80de7e4f-9135-4c75-af0b-155e74493220" manual="true">
+          <element uuid="885b82e8-f511-4c86-8b0e-3d984c7cdbf3" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>unidirectional</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>connection</seg>
+            <seg>processorEthernetAccess</seg>
+          </bo>
+        </element>
+        <element uuid="52a7b281-1929-4d56-84be-b7f98d48827c" manual="true" dockArea="bottom">
+          <bo>
+            <seg>feature</seg>
+            <seg>createTicketOutput</seg>
+          </bo>
+          <position x="100.0" y="1275.0"/>
+        </element>
+        <element uuid="2d0e9778-f23c-4897-90a0-837cf99813f6" manual="true" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>ethernetAccess</seg>
+          </bo>
+          <position/>
+        </element>
+        <element uuid="d1e68686-cc8f-4494-9696-787fbb76d882" manual="true">
+          <element uuid="53ec003b-2b05-4585-9c90-0185b7938cda" manual="true" dockArea="left">
+            <bo>
+              <seg>feature</seg>
+              <seg>entryUsbAccess</seg>
+            </bo>
+            <position y="130.0"/>
+          </element>
+          <element uuid="c953bc48-7a66-4d20-9f40-e7ec0cb0d6e4" manual="true" dockArea="right">
+            <bo>
+              <seg>feature</seg>
+              <seg>open_event</seg>
+            </bo>
+            <position x="108.32811737060547" y="120.0"/>
+          </element>
+          <element uuid="6b133a4d-d161-4a81-a178-28feca1165ba" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>sc_type</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>entryBarrier</seg>
+          </bo>
+          <position x="670.0" y="190.0"/>
+          <size width="190.02212524414062" height="170.0"/>
+        </element>
+        <element uuid="7b644dfa-846e-431b-8a9c-c4f390047283" manual="true">
+          <element uuid="7b54158f-5c27-4343-bb08-68264c854a88" manual="true">
+            <element uuid="f24b2961-11ed-47b3-89fa-bad01ed56486" manual="true">
+              <bo>
+                <seg>tag</seg>
+                <seg>unidirectional</seg>
+              </bo>
+            </element>
+            <bo>
+              <seg>connection</seg>
+              <seg>open_barrier_event_connection</seg>
+            </bo>
+          </element>
+          <element uuid="74e0cae0-8570-49b3-98e5-e54cf54cb4d2" manual="true">
+            <element uuid="c2db22d9-392f-43ce-9388-079f72517341" manual="true">
+              <bo>
+                <seg>tag</seg>
+                <seg>unidirectional</seg>
+              </bo>
+            </element>
+            <bo>
+              <seg>connection</seg>
+              <seg>ticket_request_in_connection_connection</seg>
+            </bo>
+          </element>
+          <element uuid="7a1f885a-a92f-4e7e-91d5-c97b240d8fba" manual="true">
+            <element uuid="c92c9e2c-1446-4c8a-9d68-ee80ec521f97" manual="true">
+              <bo>
+                <seg>tag</seg>
+                <seg>unidirectional</seg>
+              </bo>
+            </element>
+            <bo>
+              <seg>connection</seg>
+              <seg>ticket_request_out_connection_connection</seg>
+            </bo>
+          </element>
+          <element uuid="a0db98e9-659e-4a07-9ee2-d0f68bd187f2" manual="true" dockArea="top">
+            <bo>
+              <seg>feature</seg>
+              <seg>open_barrier_event</seg>
+            </bo>
+            <position x="810.0"/>
+          </element>
+          <element uuid="5c093916-0bf0-4e2d-a17b-f6233d44f1ae" manual="true" dockArea="top">
+            <bo>
+              <seg>feature</seg>
+              <seg>ticketRequestIn</seg>
+            </bo>
+            <position x="100.0"/>
+          </element>
+          <element uuid="5cd487d3-1a9f-4ecb-8a38-766f31728f3d" manual="true" dockArea="bottom">
+            <bo>
+              <seg>feature</seg>
+              <seg>ticketRequestOut</seg>
+            </bo>
+            <position x="120.0" y="143.0"/>
+          </element>
+          <element uuid="5a983afc-e5cf-44f5-a87a-d540977c615d" manual="true">
+            <bo>
+              <seg>pvg</seg>
+              <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+              <seg>0e2248f4-c4d3-44a4-864d-bde042494956</seg>
+            </bo>
+          </element>
+          <element uuid="367eae20-feae-461d-80fe-58d53a5b8f65" manual="true">
+            <element uuid="54e51bc6-65cf-4377-a24c-e3639b725015" manual="true" dockArea="right">
+              <bo>
+                <seg>feature</seg>
+                <seg>open_barrier_event</seg>
+              </bo>
+              <position x="306.36197662353516" y="60.0"/>
+            </element>
+            <element uuid="95cf5d6e-9ffd-429e-982d-ae8417a40b62" manual="true" dockArea="left">
+              <bo>
+                <seg>feature</seg>
+                <seg>ticketRequestIn</seg>
+              </bo>
+              <position/>
+            </element>
+            <element uuid="75ce47aa-ab47-4422-870c-8de2c5f3e11c" manual="true" dockArea="left">
+              <bo>
+                <seg>feature</seg>
+                <seg>ticketRequestOut</seg>
+              </bo>
+              <position y="80.0"/>
+            </element>
+            <element uuid="f9a9e20b-c681-4d30-bb95-d58d090c61c7" manual="true">
+              <bo>
+                <seg>tag</seg>
+                <seg>sc_type</seg>
+              </bo>
+            </element>
+            <bo>
+              <seg>subcomponent</seg>
+              <seg>entryTask</seg>
+            </bo>
+            <position x="340.0" y="47.0"/>
+            <size width="434.0" height="120.0"/>
+          </element>
+          <element uuid="672de3df-fc68-4ac1-8fa8-22e54659dae1" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>sc_type</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>entryProcess</seg>
+          </bo>
+          <position y="510.0"/>
+          <size width="1039.0" height="167.0"/>
+        </element>
+        <element uuid="0e2248f4-c4d3-44a4-864d-bde042494956" manual="true">
+          <element uuid="27179490-579a-4819-a7e1-2285c89dc9ff" manual="true" dockArea="left">
+            <bo>
+              <seg>feature</seg>
+              <seg>ethernetAccess</seg>
+            </bo>
+            <position y="10.0"/>
+          </element>
+          <element uuid="efbb00e2-0449-49f7-8076-b9dfcdca3f64" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>sc_type</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>entryProcessor</seg>
+          </bo>
+          <position x="430.0" y="100.0"/>
+          <size width="418.0" height="60.0"/>
+        </element>
+        <element uuid="f5607308-43de-4311-bfa7-c11858ea98d3" manual="true">
+          <element uuid="d13734a2-2a9d-4a34-8505-b1f267a01e64" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>sc_type</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>entryUsb</seg>
+          </bo>
+          <position x="470.0" y="430.0"/>
+          <size width="145.0" height="52.0"/>
+        </element>
+        <element uuid="eb2b5cdb-9ac8-4aa1-b5ca-40c5ce89e9e5" manual="true">
+          <element uuid="c15824b6-081c-492d-b390-889e152b097e" manual="true">
+            <bo>
+              <seg>pvg</seg>
+              <seg>SEI::BandWidthCapacity</seg>
+            </bo>
+          </element>
+          <element uuid="3fb0214a-b521-4195-bc15-4e276559871e" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>sc_type</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>ethernet</seg>
+          </bo>
+          <position x="40.0" y="160.0"/>
+          <size width="160.0" height="69.0"/>
+        </element>
+        <element uuid="8ac9b298-6cbe-4147-bb4d-a62252fe09e6" manual="true">
+          <element uuid="b890eb51-c9be-4ff7-9d4e-b21c51fab785" manual="true" dockArea="right">
+            <bo>
+              <seg>feature</seg>
+              <seg>entryUsbAccess</seg>
+            </bo>
+            <position x="294.67188262939453" y="70.0"/>
+          </element>
+          <element uuid="17a3db4a-994a-413e-90b3-2721a3dfeeb8" manual="true" dockArea="bottom">
+            <bo>
+              <seg>feature</seg>
+              <seg>ticketRequest</seg>
+            </bo>
+            <position x="30.0" y="86.0"/>
+          </element>
+          <element uuid="168d49b4-acd0-4fc5-9a2d-b16ef55a4444" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>sc_type</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>ticketDispenser</seg>
+          </bo>
+          <position x="110.0" y="270.0"/>
+          <size width="403.0" height="110.0"/>
+        </element>
+        <element uuid="c00dd1c8-3e31-494f-9a2a-0448785dcbd0" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>sc_type</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>entry_subsystem</seg>
+        </bo>
+        <position x="810.0" y="230.0"/>
+        <size width="1039.0" height="1299.0"/>
+      </element>
+      <element uuid="37a77e51-92d9-4026-a629-3f17604de087" manual="true">
+        <element uuid="310e7ca1-47dc-445d-9bdb-22847152553d" manual="true">
+          <bo>
+            <seg>pvg</seg>
+            <seg>SEI::BandWidthCapacity</seg>
+          </bo>
+        </element>
+        <element uuid="df6e3a1c-452f-4a8c-9390-0fdfbbb103dd" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>sc_type</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>ethernet</seg>
+        </bo>
+        <position y="230.0"/>
+        <size width="280.0" height="69.0"/>
+      </element>
+      <element uuid="a5391825-0b49-4957-b0eb-89eb474b7c42" manual="true">
+        <element uuid="bef1f55e-7eb0-4b4b-a9b2-ed3ec7fd855c" manual="true">
+          <element uuid="6af8b87f-bc5f-468d-ba1a-d5ffa5f09390" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>unidirectional</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>connection</seg>
+            <seg>barrierUsbAccess</seg>
+          </bo>
+        </element>
+        <element uuid="859bfa23-776a-45e2-87ab-a12c05ce15a2" manual="true">
+          <element uuid="912aa899-a311-40a8-933e-edb550b3d0bd" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>unidirectional</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>connection</seg>
+            <seg>dispenserUsbAccess</seg>
+          </bo>
+        </element>
+        <element uuid="1891b348-f85a-45f4-9f1e-783f9197fd9f" manual="true">
+          <element uuid="d9cf34eb-9a4f-42bb-8f6c-16bf0049dcab" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>unidirectional</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>connection</seg>
+            <seg>openBarrierConnection</seg>
+          </bo>
+        </element>
+        <element uuid="0463dce2-23e8-49a4-8c1a-711a11dd1f81" manual="true">
+          <element uuid="adb0da99-d096-485e-93f8-8b31f7bd45a2" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>unidirectional</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>connection</seg>
+            <seg>processorEthernetAccess</seg>
+          </bo>
+        </element>
+        <element uuid="2af37bb4-6eac-4762-a622-a786eec013c9" manual="true">
+          <element uuid="b199cc57-7274-4e0b-9637-f7397bef6854" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>unidirectional</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>connection</seg>
+            <seg>ticketRequestInternalConnection</seg>
+          </bo>
+        </element>
+        <element uuid="c5ebfca6-4f26-48cb-a590-1a13abcb4f35" manual="true">
+          <element uuid="9a584c72-a01f-4cf3-bf1c-db5f65a4f452" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>unidirectional</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>connection</seg>
+            <seg>ticketRequestOutConnection</seg>
+          </bo>
+        </element>
+        <element uuid="6d9ce119-f2e2-42e8-ad64-ad449bc98367" manual="true" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>ethernetAccess</seg>
+          </bo>
+          <position y="410.0"/>
+        </element>
+        <element uuid="78b81e45-5be5-4951-b46c-8d11a6c9c99c" manual="true" dockArea="left">
+          <element uuid="099d9dba-3e2c-4cd4-b9fa-bf4c4764c411" manual="true">
+            <bo>
+              <seg>pvg</seg>
+              <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+              <seg>aaf0c8e9-47b1-428f-a442-471a3e17f8f2</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>feature</seg>
+            <seg>openBarrierInput</seg>
+          </bo>
+          <position y="20.0"/>
+        </element>
+        <element uuid="d51cad94-5622-487a-936f-ae3f2bddc87a" manual="true" dockArea="top">
+          <element uuid="0cba55d0-77d2-4a83-922d-e2e167fa71eb" manual="true">
+            <bo>
+              <seg>pvg</seg>
+              <seg>Deployment_Properties::Actual_Connection_Binding</seg>
+              <seg>aaf0c8e9-47b1-428f-a442-471a3e17f8f2</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>feature</seg>
+            <seg>validateTicketOutput</seg>
+          </bo>
+          <position x="1060.0"/>
+        </element>
+        <element uuid="aaf0c8e9-47b1-428f-a442-471a3e17f8f2" manual="true">
+          <element uuid="5e22a0d3-dbd4-48a7-8e53-6cc02eaa9162" manual="true">
+            <bo>
+              <seg>pvg</seg>
+              <seg>SEI::BandWidthCapacity</seg>
+            </bo>
+          </element>
+          <element uuid="0491cc66-eb5b-4fb5-bfd7-a42836e39124" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>sc_type</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>ethernet</seg>
+          </bo>
+          <position x="820.0" y="80.0"/>
+          <size width="160.0" height="69.0"/>
+        </element>
+        <element uuid="89c79696-30f6-4ccd-b451-7cffda7c1c20" manual="true">
+          <element uuid="e4eb1645-0093-4014-810d-3a98fbd04e76" manual="true" dockArea="right">
+            <bo>
+              <seg>feature</seg>
+              <seg>exitUsbAccess</seg>
+            </bo>
+            <position x="81.69400787353516" y="130.0"/>
+          </element>
+          <element uuid="75420b1f-fd22-4b64-8c40-bfe237528841" manual="true" dockArea="left">
+            <bo>
+              <seg>feature</seg>
+              <seg>open_event</seg>
+            </bo>
+            <position y="60.0"/>
+          </element>
+          <element uuid="89fc3964-d077-49a8-bce8-027730ea5873" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>sc_type</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>exitBarrier</seg>
+          </bo>
+          <position x="480.0" y="60.0"/>
+          <size width="181.12890625" height="170.0"/>
+        </element>
+        <element uuid="2028a131-3aa9-42c8-b899-69a873d31a18" manual="true">
+          <element uuid="9adbe306-9ecc-45d1-88af-6be66f0f39d2" manual="true">
+            <bo>
+              <seg>pvg</seg>
+              <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+              <seg>5a867701-5534-4337-8433-6ba85353dad8</seg>
+            </bo>
+          </element>
+          <element uuid="a5510e12-e54d-4ad7-abb2-d610c9063d8f" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>sc_type</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>exitProcess</seg>
+          </bo>
+          <position x="180.0" y="540.0"/>
+          <size width="435.0" height="60.0"/>
+        </element>
+        <element uuid="5a867701-5534-4337-8433-6ba85353dad8" manual="true">
+          <element uuid="6847fa55-a20a-4c2d-b10f-69d2f508f39c" manual="true" dockArea="left">
+            <bo>
+              <seg>feature</seg>
+              <seg>ethernetAccess</seg>
+            </bo>
+            <position y="10.0"/>
+          </element>
+          <element uuid="6dfb5d7d-1204-44c8-9faf-4bc7e5f32e61" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>sc_type</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>exitProcessor</seg>
+          </bo>
+          <position x="790.0" y="500.0"/>
+          <size width="400.0" height="60.0"/>
+        </element>
+        <element uuid="5a29b78a-a270-46d0-88da-257480b53d09" manual="true">
+          <element uuid="4e2a331b-8432-46c2-9a95-b25f2e8e40a1" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>sc_type</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>exitUsb</seg>
+          </bo>
+          <position x="500.0" y="320.0"/>
+          <size width="130.0" height="52.0"/>
+        </element>
+        <element uuid="1a44d38c-af85-408c-8d23-cf7e29186a25" manual="true">
+          <element uuid="aceb9f97-c144-4f40-8a51-b920e2d763bf" manual="true" dockArea="right">
+            <bo>
+              <seg>feature</seg>
+              <seg>exitUsbAccess</seg>
+            </bo>
+            <position x="260.56510162353516" y="60.0"/>
+          </element>
+          <element uuid="af44db9f-5e36-4937-be59-c4de6616f243" manual="true" dockArea="bottom">
+            <bo>
+              <seg>feature</seg>
+              <seg>ticketRequest</seg>
+            </bo>
+            <position x="180.0" y="116.0"/>
+          </element>
+          <element uuid="e1966160-0fb6-4238-bc29-2ae382305392" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>sc_type</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>tickerChecker</seg>
+          </bo>
+          <position x="70.0" y="190.0"/>
+          <size width="360.0" height="140.0"/>
+        </element>
+        <element uuid="2dd08c92-8f9f-44c2-be7f-ca61137f899b" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>sc_type</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>exit_subsystem</seg>
+        </bo>
+        <position x="280.0" y="1840.0"/>
+        <size width="1310.0" height="650.0"/>
+      </element>
+      <element uuid="7bc91054-70aa-4eba-8053-a950159a89b7" manual="true">
+        <element uuid="0d157297-4ad7-4fac-8242-fd2ef903ce4c" manual="true" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>ethernetAccess</seg>
+          </bo>
+          <position y="10.0"/>
+        </element>
+        <element uuid="d818e914-c7f9-4fa7-9ef2-f3a6d4384204" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>sc_type</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>parkingProcessor</seg>
+        </bo>
+        <position x="290.0" y="510.0"/>
+        <size width="365.02992248535156" height="60.0"/>
+      </element>
+      <element uuid="a0b00c05-1d86-40bf-96b7-fd90f1a8551b" manual="true">
+        <element uuid="2e5fa45f-8489-49df-9cd3-dd5f85250427" manual="true" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>open_exit_barrier_event</seg>
+          </bo>
+          <position y="280.0"/>
+        </element>
+        <element uuid="dea926c1-bfe2-4d48-b501-f26ed593a817" manual="true" dockArea="top">
+          <bo>
+            <seg>feature</seg>
+            <seg>payIn</seg>
+          </bo>
+          <position x="420.02083587646484"/>
+        </element>
+        <element uuid="19f61525-b700-4d63-a518-f34a36ed197f" manual="true" dockArea="top">
+          <bo>
+            <seg>feature</seg>
+            <seg>quatationsIn</seg>
+          </bo>
+          <position x="80.0"/>
+        </element>
+        <element uuid="c69196f0-52cf-4f74-bc73-7e1f73581a7f" manual="true" dockArea="top">
+          <bo>
+            <seg>feature</seg>
+            <seg>quatationsOut</seg>
+          </bo>
+          <position x="300.0"/>
+        </element>
+        <element uuid="ccabd37b-0214-402a-82be-a963012fa62f" manual="true" dockArea="right">
+          <bo>
+            <seg>feature</seg>
+            <seg>ticketRequestIn</seg>
+          </bo>
+          <position x="394.09896087646484" y="80.0"/>
+        </element>
+        <element uuid="aa5da8d3-9c0c-4487-8f2a-2c1b38f02db2" manual="true" dockArea="right">
+          <bo>
+            <seg>feature</seg>
+            <seg>validateTicketRequestIn</seg>
+          </bo>
+          <position x="343.7018280029297" y="200.0"/>
+        </element>
+        <element uuid="26edf85d-d041-4323-84ed-90168c919c60" manual="true">
+          <bo>
+            <seg>pvg</seg>
+            <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+            <seg>7bc91054-70aa-4eba-8053-a950159a89b7</seg>
+          </bo>
+          <bendpoints>
+            <point x="184.0" y="1070.0"/>
+          </bendpoints>
+        </element>
+        <element uuid="7019c597-881b-4f08-9bff-6fa17ba100a8" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>sc_type</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>serverProcess</seg>
+        </bo>
+        <position x="240.0" y="1480.0"/>
+        <size width="498.0" height="320.0"/>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>ParkingSystem.impl</seg>
+      </bo>
+      <position x="90.0" y="210.0"/>
+      <size width="1899.0" height="3770.0"/>
+    </element>
+    <bo>
+      <seg>package</seg>
+      <seg>parking</seg>
+    </bo>
+    <position/>
+    <size width="1989.0" height="3980.0"/>
+  </element>
+  <config type="package" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties>
+      <property>sei::bandwidthcapacity</property>
+      <property>deployment_properties::actual_processor_binding</property>
+      <property>deployment_properties::actual_connection_binding</property>
+    </enabledAadlProperties>
+    <context>
+      <seg>package</seg>
+      <seg>parking</seg>
+    </context>
+  </config>
+</diagram:Diagram>

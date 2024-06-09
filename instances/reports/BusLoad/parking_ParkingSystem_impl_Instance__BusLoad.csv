@@ -1,0 +1,12 @@
+Bus load analysis of ParkingSystem_impl_Instance
+
+
+"Physical Bus","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"ethernet","1000000.0","0.0","0.0","0.0"
+
+"Bus ethernet has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+
+"WARNING: Bus ethernet has no bandwidth budget"
+
+

@@ -1,0 +1,69 @@
+package CashRegister
+public
+	with CommonTypes;
+	with Base_Types;
+	
+	-- _________________PROCESS______________ --
+	
+	
+	process CashRegisterProcess
+		features
+			quatationsOut: out data port CommonTypes::HTTPServerData.TicketPayQuatationRequestModel;
+			quatationsIn: in data port CommonTypes::HTTPServerData.TicketPayQuatationResponseModel;
+			payOut: out data port CommonTypes::HTTPServerData.TicketPayRequestModel;
+			ticketsReads: in data port ReadTicketId;
+			insertedMoney: in data port MoneyInserted;
+	end CashRegisterProcess;
+	
+	process implementation CashRegisterProcess.impl
+		subcomponents
+			cashRegisterThread: thread CashRegisterThread.impl;
+		connections
+			quatationsOut_connection: port cashRegisterThread.quatationsOut -> quatationsOut;
+			quatationsIn_connection: port quatationsIn -> cashRegisterThread.quatationsIn;
+			payOut_connection: port cashRegisterThread.payOut -> payOut;
+	end CashRegisterProcess.impl;
+	
+	-- _________________DATA______________ --
+		
+ 	data ReadTicketId
+	end ReadTicketId;
+	
+	data implementation ReadTicketId.impl
+		subcomponents
+			id: data Base_Types::Integer;
+	end ReadTicketId.impl;
+	
+	data MoneyInserted
+	end MoneyInserted;
+	
+	data implementation MoneyInserted.impl
+		subcomponents
+			money: data Base_Types::Integer;
+	end MoneyInserted.impl;
+	
+	-- _________________THREADS______________ --
+	
+	
+	thread CashRegisterThread
+		features
+			quatationsOut: out data port CommonTypes::HTTPServerData.TicketPayQuatationRequestModel;
+			quatationsIn: in data port CommonTypes::HTTPServerData.TicketPayQuatationResponseModel;
+			payOut: out data port CommonTypes::HTTPServerData.TicketPayRequestModel;
+			ticketsReads: in data port ReadTicketId;
+			insertedMoney: in data port MoneyInserted;
+	end CashRegisterThread;
+	
+	thread implementation CashRegisterThread.impl
+	end CashRegisterThread.impl;
+	
+	-- _________________DEVICES______________ --
+	
+	device CashRegister
+		features
+			ticketsReads: out data port ReadTicketId;
+			insertedMoney: out data port MoneyInserted;
+	end CashRegister;
+	
+
+end CashRegister;

@@ -1,0 +1,102 @@
+package Entry
+public
+	with Ethernet;
+	with CommonTypes;
+	
+	system EntrySystem
+		features
+			createTicketOutput: out data port CommonTypes::TicketCreateRequestModel;
+			ethernetAccess: requires bus access Ethernet::Ethernet;
+	end EntrySystem;
+	
+  	system implementation EntrySystem.impl
+  		subcomponents
+  			entryBarrier: device EntryBarrier;
+  			ticketDispenser: device TicketDispenser;
+			entryProcessor: processor EntryProcessor.impl;
+			entryProcess: process EntryProcess.impl;
+			entryUsb: bus EntryUsb;
+			ethernet: bus Ethernet::Ethernet;
+  		connections
+  			processorEthernetAccess: bus access ethernetAccess -> entryProcessor.ethernetAccess;
+			barrierUsbAccess: bus access entryUsb -> entryBarrier.entryUsbAccess;
+			dispenserUsbAccess: bus access entryUsb -> ticketDispenser.entryUsbAccess;
+			-- SYSTEM OUTPUT CONNECTIONS --
+			createTicketOutputConnection: port entryProcess.ticketRequestOut -> createTicketOutput;
+			-- CONNECTIONS WITH DEVICES --
+			barrierOpenEventConnection: port entryProcess.open_barrier_event -> entryBarrier.open_event;
+			dispenserTicketRequestConnection: port ticketDispenser.ticketRequest -> entryProcess.ticketRequestIn;
+  		properties
+  			Actual_Processor_Binding => (reference(entryProcessor))  applies to entryProcess;		
+			Actual_Connection_Binding => (reference(ethernet)) applies to createTicketOutputConnection;		
+			Actual_Connection_Binding => (reference(entryUsb)) applies to barrierOpenEventConnection;	
+			Actual_Connection_Binding => (reference(entryUsb)) applies to dispenserTicketRequestConnection;	
+  	end EntrySystem.impl;
+  	
+
+  	
+ 
+	
+	-- _________________PROCESSOR______________ --
+	
+	processor EntryProcessor
+		features
+			ethernetAccess: requires bus access Ethernet::Ethernet;
+	end EntryProcessor;
+	
+	processor implementation EntryProcessor.impl
+	end EntryProcessor.impl;
+	
+	-- _________________PROCESS______________ --
+	
+	
+	process EntryProcess
+		features
+			ticketRequestIn: in data port CommonTypes::TicketCreateRequestModel;
+			ticketRequestOut: out data port CommonTypes::TicketCreateRequestModel;
+			open_barrier_event: out event port;
+	end EntryProcess;
+	
+	process implementation EntryProcess.impl
+		subcomponents
+			entryTask: thread EntryTask.impl;
+		connections
+			open_barrier_event_connection: port entryTask.open_barrier_event -> open_barrier_event;
+			ticket_request_out_connection_connection: port entryTask.ticketRequestOut -> ticketRequestOut;
+			ticket_request_in_connection_connection: port ticketRequestIn -> entryTask.ticketRequestIn;
+	end EntryProcess.impl;
+	
+	-- _________________THREADS______________ --
+	
+	
+	thread EntryTask
+		features
+			ticketRequestIn: in data port CommonTypes::TicketCreateRequestModel;
+			ticketRequestOut: out data port CommonTypes::TicketCreateRequestModel;
+			open_barrier_event: out event port;
+	end EntryTask;
+	
+	thread implementation EntryTask.impl
+	end EntryTask.impl;
+	
+	-- _________________DEVICES______________ --
+	
+	
+	device TicketDispenser
+		features 
+			ticketRequest: out data port CommonTypes::TicketCreateRequestModel;
+			entryUsbAccess: requires bus access EntryUsb;
+	end TicketDispenser;
+	
+	device EntryBarrier
+		features
+			open_event: in event port;
+			entryUsbAccess: requires bus access EntryUsb;
+	end EntryBarrier;
+	
+	-- _________________BUSES______________ --
+	
+	bus EntryUsb
+	end EntryUsb;
+	
+end Entry;

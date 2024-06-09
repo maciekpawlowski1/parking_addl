@@ -1,0 +1,83 @@
+package Exit
+public
+	with Ethernet;
+	with CommonTypes;
+	
+	system ExitSystem
+		features
+			validateTicketOutput: out data port CommonTypes::TicketValidationRequestModel;
+			openBarrierInput: in event port;
+			ethernetAccess: requires bus access Ethernet::Ethernet;
+	end ExitSystem;
+	
+  	system implementation ExitSystem.impl
+  		subcomponents
+  			exitBarrier: device ExitBarrier;
+  			tickerChecker: device TickerChecker;
+			exitProcessor: processor ExitProcessor.impl;
+			exitProcess: process ExitProcess.impl;
+			ethernet: bus Ethernet::Ethernet;
+			exitUsb: bus ExitUsb;
+  		connections
+  			processorEthernetAccess: bus access ethernetAccess -> exitProcessor.ethernetAccess;
+  			
+			barrierUsbAccess: bus access exitUsb -> exitBarrier.exitUsbAccess;
+			dispenserUsbAccess: bus access exitUsb -> tickerChecker.exitUsbAccess;
+			
+			openBarrierConnection: port openBarrierInput -> exitBarrier.open_event;
+			ticketRequestOutConnection: port exitProcess.ticketRequestOut -> validateTicketOutput;
+			
+			ticketRequestInternalConnection: port tickerChecker.ticketRequest -> exitProcess.ticketRequestIn;
+			
+  		properties
+  			Actual_Processor_Binding => (reference(exitProcessor))  applies to exitProcess;
+			Actual_Connection_Binding => (reference(ethernet)) applies to validateTicketOutput;		
+  			Actual_Connection_Binding => (reference(ethernet)) applies to openBarrierInput;				
+  	end ExitSystem.impl;
+ 
+  	
+  	
+	-- _________________PROCESSOR______________ --
+
+	
+	processor ExitProcessor
+		features
+			ethernetAccess: requires bus access Ethernet::Ethernet;
+	end ExitProcessor;
+	
+	processor implementation ExitProcessor.impl
+	end ExitProcessor.impl;
+	
+	
+	-- _________________PROCESS______________ --
+	
+	
+	process ExitProcess
+		features
+			ticketRequestOut: out data port CommonTypes::TicketValidationRequestModel;
+			ticketRequestIn: in data port CommonTypes::TicketValidationRequestModel;
+	end ExitProcess;
+	
+	process implementation ExitProcess.impl
+	end ExitProcess.impl;
+	
+	-- _________________DEVICES______________ --
+	
+	device TickerChecker
+		features 
+			ticketRequest: out data port CommonTypes::TicketValidationRequestModel;
+			exitUsbAccess: requires bus access ExitUsb;
+	end TickerChecker;
+	
+	device ExitBarrier
+		features
+			open_event: in event port;
+			exitUsbAccess: requires bus access ExitUsb;
+	end ExitBarrier;
+	
+	-- _________________BUSES______________ --
+	
+	bus ExitUsb
+	end ExitUsb;
+	
+end Exit;

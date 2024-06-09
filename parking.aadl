@@ -1,0 +1,61 @@
+package parking
+public
+	with Entry;
+	with Exit;
+	with Server;
+	with Availability;
+	with Ethernet;
+	with CashRegister;
+
+	
+	system ParkingSystem
+  	end ParkingSystem;
+  	
+  	system implementation ParkingSystem.impl
+  		subcomponents
+  			ethernet: bus Ethernet::Ethernet;
+  			entry_subsystem: system Entry::EntrySystem.impl;
+  			exit_subsystem: system Exit::ExitSystem.impl;
+  			availabilitySubsystem: system Availability::AvailabilitySystem.impl;
+  			
+  			serverProcess: process Server::ServerProcess;
+  			cashRegisterProcess: process CashRegister::CashRegisterProcess;
+  			
+  			parkingProcessor: processor ParkingProcessor;
+ 			
+ 			cashRegisterDevice: device CashRegister::CashRegister;
+  		connections
+  			processorEthernetAccess: bus access ethernet -> parkingProcessor.ethernetAccess;
+  			
+  			
+  			entry_ethernet_connection: bus access ethernet -> entry_subsystem.ethernetAccess;
+  			exit_ethernet_connection: bus access ethernet -> exit_subsystem.ethernetAccess;
+  			quatations_connection1: port cashRegisterProcess.quatationsOut -> serverProcess.quatationsIn;
+  			quatations_connection2: port serverProcess.quatationsOut -> cashRegisterProcess.quatationsIn;
+  			pay_connection: port cashRegisterProcess.payOut -> serverProcess.payIn;
+  			
+  			
+  			ticketsReadsConnection: port cashRegisterDevice.ticketsReads -> cashRegisterProcess.ticketsReads;
+  			insertedMoneyConnection: port cashRegisterDevice.insertedMoney -> cashRegisterProcess.insertedMoney;
+  			
+  			-- CONNECTIONS BETWEEN SUBSYSTEMS --
+  			createTicketConnection: port entry_subsystem.createTicketOutput -> serverProcess.ticketRequestIn;
+  			validateTicketOutputConnection: port exit_subsystem.validateTicketOutput -> serverProcess.validateTicketRequestIn;
+  			openBarrieConnection: port serverProcess.open_exit_barrier_event -> exit_subsystem.openBarrierInput;
+  			
+  		properties
+  			Actual_Processor_Binding => (reference(parkingProcessor))  applies to serverProcess;		
+  			Actual_Processor_Binding => (reference(parkingProcessor))  applies to cashRegisterProcess;		
+  			
+  			
+  	end ParkingSystem.impl;
+	
+	
+	processor ParkingProcessor
+		features
+			ethernetAccess: requires bus access Ethernet::Ethernet;
+	end ParkingProcessor;
+	
+
+	
+end parking;

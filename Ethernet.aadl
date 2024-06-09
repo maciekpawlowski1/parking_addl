@@ -1,0 +1,10 @@
+package Ethernet
+public
+	with sei;
+	
+	
+  	bus Ethernet
+  		properties
+  			SEI::BandWidthCapacity => 1000.0 MBytesps;
+  	end Ethernet;
+end Ethernet;

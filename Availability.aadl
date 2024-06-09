@@ -1,0 +1,91 @@
+package Availability
+public
+	with Base_Types;
+	
+	system AvailabilitySystem
+		
+	end AvailabilitySystem;
+	
+	system implementation AvailabilitySystem.impl
+		subcomponents
+  			availabilityProcess: process AvailabilityProcess;
+  			availabilityProcessor: processor AvailabilityProcessor;
+  			
+  			availabilityUsb: bus AvailabilityUsb;
+  			
+  			availabilityMonitor: device AvailabilityMonitor;
+  			availabilitySensor: device AvailabilitySensor;
+  			
+		connections
+			  processorUsbAccess: bus access availabilityUsb -> availabilityProcessor.usbAccess;
+			
+			availabilityMonitorUsbAccess: bus access availabilityUsb -> availabilityMonitor.availabilityUsbAccess;
+			availabilitySensorUsbAccess: bus access availabilityUsb -> availabilitySensor.availabilityUsbAccess;
+			-- CONNECTIONS WITH DEVICES --
+			availabilityMonitorConnection: port availabilityProcess.numberOfTakenPlacesOut -> availabilityMonitor.numberOfTakenPlacesIn;
+			availabilitySensorConnection: port availabilitySensor.isPlaceTakenOut -> availabilityProcess.isPlaceTakenIn;
+			
+		properties
+			Actual_Processor_Binding => (reference(availabilityProcessor))  applies to availabilityProcess;
+	end AvailabilitySystem.impl;
+	
+	-- _________________PROCESSOR______________ --
+	
+	processor AvailabilityProcessor
+		features
+			usbAccess: requires bus access AvailabilityUsb;
+	end AvailabilityProcessor;
+	
+	processor implementation AvailabilityProcessor.impl
+	end AvailabilityProcessor.impl;
+	
+	-- _________________PROCESS______________ --
+	
+	
+	process AvailabilityProcess
+		features
+			isPlaceTakenIn: in data port Base_Types::Boolean;
+			numberOfTakenPlacesOut: out data port Base_Types::Integer;
+	end AvailabilityProcess;
+	
+	process implementation AvailabilityProcess.impl
+		subcomponents
+			availabilityThread: thread AvailabilityThread.impl;
+		connections
+			isPlaceTakenInConnection: port isPlaceTakenIn -> availabilityThread.isPlaceTakenIn;
+			numberOfTakenPlacesConnection: port availabilityThread.numberOfTakenPlacesOut -> numberOfTakenPlacesOut;
+	end AvailabilityProcess.impl;
+	
+	-- _________________THREADS______________ --
+	
+	
+	thread AvailabilityThread
+		features
+			isPlaceTakenIn: in data port Base_Types::Boolean;
+			numberOfTakenPlacesOut: out data port Base_Types::Integer;
+	end AvailabilityThread;
+	
+	thread implementation AvailabilityThread.impl
+	end AvailabilityThread.impl;
+	
+	-- _________________DEVICES______________ --
+	
+	
+	device AvailabilityMonitor
+		features
+			availabilityUsbAccess: requires bus access AvailabilityUsb;
+			numberOfTakenPlacesIn: in data port Base_Types::Integer;
+	end AvailabilityMonitor;
+	
+	
+	device AvailabilitySensor
+		features
+			availabilityUsbAccess: requires bus access AvailabilityUsb;
+			isPlaceTakenOut: out data port Base_Types::Boolean;
+	end AvailabilitySensor;
+	
+	-- _________________BUSES______________ --
+	
+	bus AvailabilityUsb
+	end AvailabilityUsb;
+end Availability;

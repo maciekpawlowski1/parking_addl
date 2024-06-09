@@ -1,0 +1,58 @@
+package CommonTypes
+public
+	with Base_Types;
+	
+  	-- _________________DATA______________ --
+  	
+
+  	
+  	data TicketCreateRequestModel
+	end TicketCreateRequestModel;
+	
+	data implementation TicketCreateRequestModel.impl
+		subcomponents
+			ticket_id: data Base_Types::String;
+			entry_date: data Base_Types::Integer_64;
+	end TicketCreateRequestModel.impl;
+	
+	
+	
+	
+  	data TicketValidationRequestModel
+	end TicketValidationRequestModel;
+	
+	data implementation TicketValidationRequestModel.impl
+		subcomponents
+			ticket_id: data Base_Types::String;
+	end TicketValidationRequestModel.impl;
+	
+	data HTTPServerData
+	end HTTPServerData;
+	
+
+	
+	data implementation HTTPServerData.TicketPayQuatationRequestModel
+		subcomponents
+			ticket_id: data Base_Types::String;
+	end HTTPServerData.TicketPayQuatationRequestModel;
+	
+	
+	
+	
+	data implementation HTTPServerData.TicketPayQuatationResponseModel
+		subcomponents
+			ticket_id: data Base_Types::String;
+			price: data Base_Types::Integer;
+			quatation_id: data Base_Types::Integer;
+	end HTTPServerData.TicketPayQuatationResponseModel;
+	
+	
+	
+	data implementation HTTPServerData.TicketPayRequestModel
+		subcomponents
+			quatation_id: data Base_Types::Integer;
+	end HTTPServerData.TicketPayRequestModel;
+	
+
+
+end CommonTypes;

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance">
+  <instance:SystemInstance name="ParkingSystem_impl_Instance" category="system">
+    <componentInstance name="ethernet" category="bus">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthCapacity"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="1000.0">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.6"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../parking.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <subcomponent xsi:type="aadl2:BusSubcomponent" href="../parking.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedBusSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:BusType" href="../parking.aadl#parking.Ethernet"/>
+    </componentInstance>
+    <componentInstance name="entry_subsystem" category="system">
+      <featureInstance name="output" direction="out" type="/1">
+        <feature xsi:type="aadl2:DataPort" href="../Entry.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+      </featureInstance>
+      <componentInstance name="entryBarrier" category="device">
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Entry.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Entry.aadl#Entry.EntryBarrier"/>
+      </componentInstance>
+      <componentInstance name="tickerDispenser" category="device">
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Entry.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.1"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Entry.aadl#Entry.TicketDispenser"/>
+      </componentInstance>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../parking.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedSystemSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:SystemImplementation" href="../Entry.aadl#Entry.EntrySystem.impl"/>
+    </componentInstance>
+    <componentInstance name="exit_subsystem" category="system">
+      <componentInstance name="exitBarrier" category="device">
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Exit.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.0"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Exit.aadl#Exit.ExitBarrier"/>
+      </componentInstance>
+      <componentInstance name="tickerChecker" category="device">
+        <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Exit.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.1"/>
+        <index>0</index>
+        <classifier xsi:type="aadl2:DeviceType" href="../Exit.aadl#Exit.TickerChecker"/>
+      </componentInstance>
+      <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../parking.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedSystemSubcomponent.1"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:SystemImplementation" href="../Exit.aadl#Exit.ExitSystem.impl"/>
+    </componentInstance>
+    <classifier xsi:type="aadl2:SystemImplementation" href="../parking.aadl#parking.ParkingSystem.impl"/>
+    <systemOperationMode name="No Modes"/>
+    <componentImplementation xsi:type="aadl2:SystemImplementation" href="../parking.aadl#parking.ParkingSystem.impl"/>
+  </instance:SystemInstance>
+  <instance:ComponentInstance name="Entry::TicketModel" category="data">
+    <classifier xsi:type="aadl2:DataType" href="../Entry.aadl#Entry.TicketModel"/>
+  </instance:ComponentInstance>
+</xmi:XMI>

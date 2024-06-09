@@ -1,0 +1,49 @@
+package Server
+public
+	with CommonTypes;
+	
+	-- _________________PROCESS______________ --
+	
+	
+	process ServerProcess
+		features
+			ticketRequestIn: in data port CommonTypes::TicketCreateRequestModel;
+			validateTicketRequestIn: in data port CommonTypes::TicketValidationRequestModel;
+			open_exit_barrier_event: out event port;
+			quatationsIn: in data port CommonTypes::HTTPServerData.TicketPayQuatationRequestModel;
+			quatationsOut: out data port CommonTypes::HTTPServerData.TicketPayQuatationResponseModel;
+			payIn: in data port CommonTypes::HTTPServerData.TicketPayRequestModel;
+	end ServerProcess;
+	
+	process implementation ServerProcess.impl
+		subcomponents
+			serverMainThread: thread ServerMainThread.impl;
+		connections
+			open_barrier_event_connection: port ticketRequestIn -> serverMainThread.ticketRequestIn;
+			ticket_request_out_connection_connection: port validateTicketRequestIn -> serverMainThread.validateTicketRequestIn;
+			ticket_request_in_connection_connection: port serverMainThread.open_exit_barrier_event -> open_exit_barrier_event;
+			quatationsIn_connection: port quatationsIn -> serverMainThread.quatationsIn;
+			quatationsOut_connection_connection: port serverMainThread.quatationsOut -> quatationsOut;
+			payIn_connection: port payIn -> serverMainThread.payIn;
+	end ServerProcess.impl;
+	
+	-- _________________THREADS______________ --
+	
+	
+	thread ServerMainThread
+		features
+			ticketRequestIn: in data port CommonTypes::TicketCreateRequestModel;
+			validateTicketRequestIn: in data port CommonTypes::TicketValidationRequestModel;
+			open_exit_barrier_event: out event port;
+			quatationsIn: in data port CommonTypes::HTTPServerData.TicketPayQuatationRequestModel;
+			quatationsOut: out data port CommonTypes::HTTPServerData.TicketPayQuatationResponseModel;
+			payIn: in data port CommonTypes::HTTPServerData.TicketPayRequestModel;
+	end ServerMainThread;
+	
+	thread implementation ServerMainThread.impl
+	end ServerMainThread.impl;
+	
+	
+	
+
+end Server;
