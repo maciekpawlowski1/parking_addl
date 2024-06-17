@@ -43,7 +43,13 @@ public
 	thread implementation ServerMainThread.impl
 	end ServerMainThread.impl;
 	
+		-- _________________MEMORY______________ --
 	
-	
+	memory Database
+	----
+	end Database;
+	 
+	memory implementation Database.impl
+	end Database.impl;
 
 end Server;

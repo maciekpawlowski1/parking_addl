@@ -24,6 +24,7 @@ public
   			parkingProcessor: processor ParkingProcessor;
  			
  			cashRegisterDevice: device CashRegister::CashRegister;
+ 			database: memory Server::Database;
   		connections
   			processorEthernetAccess: bus access ethernet -> parkingProcessor.ethernetAccess;
   			
@@ -46,7 +47,7 @@ public
   		properties
   			Actual_Processor_Binding => (reference(parkingProcessor))  applies to serverProcess;		
   			Actual_Processor_Binding => (reference(parkingProcessor))  applies to cashRegisterProcess;		
-  			
+  			Actual_Memory_Binding => (reference(database))applies to serverProcess;
   			
   	end ParkingSystem.impl;
 	
